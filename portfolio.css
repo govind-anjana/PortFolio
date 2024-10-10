@@ -1,0 +1,432 @@
+*{
+    padding: 0;
+    margin: 0;box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+
+}
+header{
+    background-color:  rgb(20, 20, 38);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding:4px 30px;;
+    position: sticky;
+    top:0px;
+    z-index: 1;
+}
+header h1{
+    color:orangered
+}
+ul{
+    display: flex;
+    list-style: none;
+    
+}
+ul li{
+    margin-right:50px;
+}
+ul li a{
+    color:white;
+    text-decoration: none;
+    font-size: 20px;     
+}
+ ul li a:hover, a.active{
+    color:rgb(14, 235, 235);
+}
+#checkbox,#checkboxy,#check{
+display: none;
+}
+section{
+    height:95vh;
+    /* border:2px solid red; */
+    background-color: rgb(29, 29, 58);
+    color:white;
+}
+.section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+section:nth-child(odd){
+    background-color: rgb(24, 23, 82);
+}
+.section .box{
+    color:white;
+}
+ .a1{
+    width:36%;
+}
+ .a1 h2{
+    font-size: 27px;;
+    padding: 7px 0px;
+    font-weight: 500;
+}
+ .h1{
+    font-size: 37px;
+    letter-spacing: 1px;
+}
+.a1 span{
+    width: 0px;
+    height: 40px;;
+    display:inline-block;
+    overflow: hidden;padding-top: 5px;
+    color:rgb(241, 15, 230);
+    font-size: 35px;
+    word-break: break-all;
+    animation: word 5s linear infinite;
+}
+@keyframes word{
+    to{
+        width: 320px;
+    }
+}
+.a1 p{
+    font-size: 17px;
+    line-height: 24px;;
+    text-align: justify;
+    text-transform: capitalize;
+    padding: 10px 0px;
+    /* color:rgb(255, 85, 0); */
+}
+.a1 button{
+    padding:5px 15px;
+    font-size: 25px;
+    background-color: rgb(40, 38, 38);
+    color:white;
+    border:none;
+    border-radius: 10px;
+    border:2px solid white ;
+    margin-top: 14px;
+    cursor: pointer;
+}
+.a2 img{
+    width:350px;
+    height:350px;
+    background-size: cover;
+    border-radius: 50%;
+    animation: changecolor 3s linear infinite;  
+    padding:10px;
+    border:10px solid white;     
+}
+@keyframes changecolor{
+    to{
+        box-shadow: 0px 0px 20px rgb(71, 196, 67),0px 0px 40px rgb(29, 221, 231),0px 0px 60px rgb(17, 163, 236);
+    }
+    from{
+        box-shadow: 0px 0px 20px rgb(173, 226, 76),0px 0px 40px rgba(4, 229, 245, 0.809),0px 0px 60px rgb(167, 168, 170);
+    }
+}
+.main{
+min-height:90vh;
+display:flex;
+justify-content: space-around;
+align-items: center;
+background-color:rgb(24, 23, 82);
+flex-wrap: wrap;
+/* z-index: 1; */
+}
+.card{
+width:220px;
+height:300px;
+position: relative;
+background: silver;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
+cursor: pointer;
+box-shadow: 10px 0px 20px black,inset 300px 0 50px gray;
+transform: perspective(3000px) rotateZ(0);
+/* transform-style: preserve-3d; */
+transition: all 1s ease;
+filter: grayscale(1);
+
+}
+.cover{
+position: absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
+background-color: white;
+transform-origin: left;
+transform-style: preserve-3d;
+transition: all 1s ease;
+
+}
+.cover img{
+position: absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+/* object-fit: cover; */
+background-size: cover;
+backface-visibility: hidden;
+}
+.card img:nth-child(1){
+
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
+}
+.card img:nth-child(2){
+transform: rotateY(180deg);
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;
+}
+.card:hover{
+transform:perspective(3000px)  rotateZ(-10deg);
+box-shadow: 10px 0px 20px black,inset 20px 0 50px gray;
+filter: grayscale(0);
+}
+.card:hover .cover{
+transform: rotateY(-130deg);
+}
+
+.content h1{
+font-size: 25px;
+text-align: center;
+color:white; 
+font-weight: bold;
+}
+.content p{
+padding:4px 10px; 
+text-align: justify;
+overflow-y: auto;
+text-transform: capitalize;
+color:chartreuse;
+}
+.content{
+width:100%;
+height:100%;
+padding:5px;
+background-size: cover;
+background: url('https://images.pexels.com/photos/1686944/pexels-photo-1686944.jpeg?auto=compress&cs=tinysrgb&w=600');
+
+}
+.skillsection{
+padding-top:50px;
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+.boxs{
+width:270px;
+
+}
+.boxs ul {
+width:100%;
+display: block;
+}
+.boxs ul li{
+padding:12px 20px;
+margin-top:10px;
+font-size: 25px;
+width:100%;
+border-radius: 20px;
+background-color: black;
+border:2px solid white;
+}
+.projectsection{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}  
+.right{
+margin-left:20px;
+}
+.right p{
+font-size: 24px;
+font-weight: 600;
+color:rgb(4, 188, 245)
+}
+.right span{
+font-size: 20px;;
+}
+.con-mess{
+margin-top:10px;
+border:2px solid white;
+background-color: white;
+color:black;
+padding:10px;
+border-radius: 20px;
+box-shadow: 0px 0px 10px silver,0px 0px 20px gray;
+}
+.con-mess input[type="text"]{
+width:90%;
+padding:3px 10px;
+font-size: 24px;;
+border:none;
+outline: none;
+background-color: transparent;
+border-bottom:2px solid black;
+margin-top:20px; 
+}
+.contact-info .fa{
+width:60px;
+height:60px;
+text-align: center; 
+font-size: 40px;
+border:2px solid white;
+padding:8px;
+border-radius: 50%;
+}
+.icon .fa{
+margin:10px 20px 10px 0px; 
+color:rgb(255, 0, 221);
+cursor: pointer;
+border:2px solid gold;
+}
+.icon .fa:hover{
+border:2px solid white;
+color:red;
+box-shadow: 0px 0px 10px silver inset,inset 0px 0px 20px white;
+}
+@media screen  and (max-width:768px){
+    #checkbox{
+        display:block;
+        position: absolute;
+        right:10%;
+        font-size: 30px;
+        color:white
+    }
+    
+    #checkboxy{
+        display:block;
+        position: absolute;
+        right:10%;
+        font-size: 30px;
+        /* z-index: 0; */
+        opacity: 0;
+    }
+
+       .header ul {
+           display: block;
+        position: absolute;
+        right:-50%;
+        top:0px;
+        width:50%;
+        height:100vh;
+        background-color: silver;
+        opacity: 1;
+       transition: 1s;;
+
+        /* color:red !important;  */    
+       } 
+       .header ul li {
+            line-height: 50px;
+            font-size: 27px;
+            text-align: center;
+            font-weight: 600;
+            /* color:red; */
+       }
+       #check:checked ~ .header ul {
+        right:0%;
+      
+       }
+       #check:checked ~ #checkboxy {
+       transition: 3s;;
+        opacity: 1;
+        z-index: 3;
+    }
+    section{
+        height:auto;
+        flex-direction: column;
+        padding:40px 10px;
+    }
+
+    .a1{
+    width:90vw;
+    margin:10px;
+}
+.a1 span{
+    display: block;
+    font-size: 30px;
+}
+
+@keyframes word{
+    to{
+        width: 100%;
+    }
+}
+.a2 img{
+    width:300px;
+    height:300px;
+}
+.main{
+        flex-direction: column;
+    }
+    .card{
+           width:170px;
+           height:240px;
+    }
+      .card:hover .cover{
+     transform: rotateY(-115deg);
+    }
+    .projectsection .right{
+margin-left:10px;
+}
+.right span:nth-child(2){
+font-size: 18px;;
+}
+}
+
+.projectsection{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.right{
+margin-left:20px;
+}
+.right p{
+font-size: 24px;
+font-weight: 600;
+color:rgb(4, 188, 245)
+}
+.right span{
+font-size: 20px;;
+}
+.con-mess{
+margin-top:10px;
+border:2px solid white;
+background-color: white;
+color:black;
+padding:10px;
+border-radius: 20px;
+box-shadow: 0px 0px 10px silver,0px 0px 20px gray;
+}
+.con-mess input[type="text"]{
+width:90%;
+padding:3px 10px;
+font-size: 24px;;
+border:none;
+outline: none;
+background-color: transparent;
+border-bottom:2px solid black;
+margin-top:20px; 
+}
+.contact-info .fa{
+width:60px;
+height:60px;
+text-align: center; 
+font-size: 40px;
+border:2px solid white;
+padding:8px;
+border-radius: 50%;
+}
+.icon .fa{
+margin:10px 20px 10px 0px; 
+color:rgb(255, 0, 221);
+cursor: pointer;
+border:2px solid gold;
+}
+.icon .fa:hover{
+border:2px solid white;
+color:red;
+box-shadow: 0px 0px 10px silver inset,inset 0px 0px 20px white;
+}
